@@ -13,19 +13,11 @@ window.addEventListener('keydown', function () {
     data.currentDirection = 'left';
   }
   if (event.key === 'ArrowRight') {
-    if (data.currentDirection === 'up') {
-      $car.setAttribute('class', 'car right-from-up');
-    } else {
-      $car.setAttribute('class', 'car right');
-    }
+    $car.setAttribute('class', 'car right');
     data.currentDirection = 'right';
   }
   if (event.key === 'ArrowUp') {
-    if (data.currentDirection === 'right') {
-      $car.setAttribute('class', 'car up-from-right');
-    } else {
-      $car.setAttribute('class', 'car up');
-    }
+    $car.setAttribute('class', 'car up');
     data.currentDirection = 'up';
   }
 })
