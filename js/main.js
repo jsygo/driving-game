@@ -3,11 +3,15 @@
 
 var $car = document.querySelector('.car');
 var $carStyle = $car.style;
+var $windowWidth = window.innerWidth;
+var intervalId = null;
 
 function moveCar() {
-  console.log('move car!');
   $carStyle.left = `${data.location.x + 5}px`;
   data.location.x += 5;
+  if ((data.location.x + 160) > $windowWidth) {
+    clearInterval(intervalId);
+  }
 }
 
 document.addEventListener('keydown', function () {
@@ -28,7 +32,10 @@ document.addEventListener('keydown', function () {
     data.currentDirection = 'up';
   }
   if (event.key === ' ') {
-    var intervalId = setInterval(moveCar, 16);
+    intervalId = setInterval(moveCar, 16);
+    // if ((data.location.x + 160) === $windowWidth) {
+    //   clearInterval(intervalId);
+    // }
   }
 })
 ;
