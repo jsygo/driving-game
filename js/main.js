@@ -33,9 +33,6 @@ document.addEventListener('keydown', function () {
   }
   if (event.key === ' ') {
     intervalId = setInterval(moveCar, 16);
-    // if ((data.location.x + 160) === $windowWidth) {
-    //   clearInterval(intervalId);
-    // }
   }
 })
 ;
