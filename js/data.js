@@ -1,5 +1,6 @@
 /* exported data */
 
 var data = {
-  currentDirection: 'right'
+  currentDirection: 'right',
+  location: { x: 0, y: 0 }
 };
